@@ -4,6 +4,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import static stepdefinition.SharedSD.getDriver;
+
 public class VerifyStarSD {
 
     @Given ("User is on the default section on page")
@@ -12,6 +14,8 @@ public class VerifyStarSD {
     {
     // its there in hook
         // verify title or url as confirmatory
+
+        getDriver().navigate().refresh();
     }
 
 
