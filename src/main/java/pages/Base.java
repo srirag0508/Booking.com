@@ -9,13 +9,13 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.function.Function;
 
 import static stepdefinition.SharedSD.getDriver;
 
 public class Base {
+    public static WebElement webAction(By locator) {
 
-    public WebElement webAction(By locator)
-    {
         Wait<WebDriver> wait = new FluentWait<WebDriver>(getDriver())
                 .withTimeout(Duration.ofSeconds(50)) // max time
                 .pollingEvery(Duration.ofSeconds(5)) // every 5 seconds
@@ -31,44 +31,34 @@ public class Base {
                                 "could not find the element therefore " +
                                 "Timeout Exception has been thrown");
 
+        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+            public WebElement apply(WebDriver driver)
+            {
+                return driver.findElement(locator);
+            }
+        });
 
-
-
-        WebElement element = getDriver().findElement(locator);
         return element;
     }
-    public void clickOn(By locator)
+
+    public void clickOn(String locator)
     {
-        webAction(locator).click();
+        //driver.findElement(locator).click()
+        //getDriver().findElement(locator).click();
+        webAction(By.id(locator)).click();
+        // element → driver.findElement(locator) → webAction(locator)
     }
 
-    public void setValue(By locator, String value)
+    public void setValue(By locator,String value)
     {
         webAction(locator).sendKeys(value);
     }
 
-    public String getElementText(By locator)
+    public String getTextFromElement(By locator)
     {
-        webAction(locator).getText();
+        return webAction(locator).getText();
     }
 
-
-    public String getElementText(By locator)
-    {
-        webAction(locator).getText();
-    }
-
-    public ArrayList<String> getElementTextList(By locator)
-    {
-        List<WebElement> elementList = getDriver().findElements(locator);
-
-        ArrayList<String> textList = new ArrayList<>();
-
-        for (int i=0;i<elementList.size();i++)
-            textList.add(elementList.get(i).getText());
-
-        return textList;
-    }
     public void selectFromDropDown(By locator,String value)
     {
         WebElement element  = webAction(locator); //driver.findElement(locator)
@@ -83,4 +73,15 @@ public class Base {
         sel.selectByIndex(i);
     }
 
+    public ArrayList<String> getElementTextList(By locator)
+    {
+        List<WebElement> elementList = getDriver().findElements(locator);
+
+        ArrayList<String> textList = new ArrayList<>();
+
+        for (int i=0;i<elementList.size();i++)
+            textList.add(elementList.get(i).getText());
+
+        return textList;
+    }
 }
