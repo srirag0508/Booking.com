@@ -1,12 +1,14 @@
-Feature: Booking Senarios
+Feature: Booking Scenarios
 
 
-  Scenario Outline: Verify user can view the result as per the property selected
 
-    Given User is on the default section on page
-    When User select Star as <Stars>
-    Then User verify that system displays only <stars> hotels
+  Scenario Outline: Verify user can only view the result by selected property class
+    Given I am on default locations search result screen
+    When I select option for stars as <stars>
+    Then I verify system displays only <stars> hotels on search result
     Examples:
       | stars   |
       | 5 stars |
+
+
 
