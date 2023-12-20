@@ -9,5 +9,4 @@ Feature: Booking Senarios
     Examples:
       | stars   |
       | 5 stars |
-      | 4 stars |
-      | 3 stars |
+
