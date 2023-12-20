@@ -18,6 +18,17 @@ public class SharedSD {
         // Initialize ChromeDriver
         driver = new ChromeDriver();
         driver.get(getUrl());
+
+        // Sign in into application
+
+        //  By SignInBtn = By.xpath("//a[@aria-label='Sign in']//span[@class='e4adce92df'][normalize-space()='Sign in']");
+        //
+        //    By username = By.id("username");
+        //    By password = By.id("password");
+        //
+        //    By continueEmailBtn = By.xpath("//span[normalize-space()='Continue with email']");
+        //
+        //    By SignInSubmitBtn = By.xpath("//span[normalize-space()='Sign in']");
     }
 
     @After

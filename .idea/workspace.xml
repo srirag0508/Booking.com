@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f5f837-bd56-41fc-a58f-3a819ee75265" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Features/bookings.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Features/bookings.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HotelSearchPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinition/SharedSD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinition/VerifyStarSD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Sigin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StepDefinition/SharedSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StepDefinition/SharedSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ConfigReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
